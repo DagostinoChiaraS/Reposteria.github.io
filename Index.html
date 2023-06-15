@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caserito de la Nona</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./CSS/diseñopagweb.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <!--Header - menu-->
+    <header>
+
+      <div class="header-content">
+
+          <div class="menu" id="show-menu">
+
+              <nav>
+                  <ul>
+                      <li><a href="../index.html"> INICIO</a></li>
+                      <li><a href="./Pages/Como comprar.html"> COMO COMPRAR</a></li>
+                      <li><a href="./Pages/Contacto.html"> CONTACTO</a></li>
+                          <div class="dropdown">
+                              <li><a href="./Pages/Productos.html"> <i class="dropdown-content">
+
+                              </i> PRODUCTOS</a></li>
+                              <div class="dropdown-content">
+                                    <a href="./Pages/Budines.html">Budines</a>
+                                    <a href="./Pages/Cookies.html">Cookies</a>
+                                    <a href="./Pages/Tortas.html">Tortas</a>
+                                    <a href="./Pages/Tartas.html">Tartas</a>
+                                  </div>
+                                </div>
+                  </ul>
+              </nav>
+
+          </div>
+
+      </div>
+
+      <div id="icon-menu">
+          <i class="fas fa-bars"></i>
+      </div>
+
+  </header>
+  <div class="container-all" id="move-content">
+<!--Cierre Header - menu -->
+
+      
+<!-- CARRUSEL PERSONALIZADO -->
+      <div id="carrusel-contenido">  <div id="carrusel-caja">
+        <div class="carrusel-elemento"> <img src="Img/imagen 1.png" alt="imagen1 para carrusel"> </div>
+        <div class="carrusel-elemento"><img src="Img/imagen 2.png" alt="imagen2 para carrusel"> </div>
+        <div class="carrusel-elemento"><img src="Img/imagen 3.png" alt="imagen3 para carrusel"> </div>
+      </div>
+      </div>
+      <!-- TERMINA CARRUSEL PERSONALIZADO -->
+
+
+<main class="holder">
+
+  <div class="in-flex">
+  <div class="Bienvenidos" >
+    
+    ¡Bienvenidos! Somos Caserito de la Nona, un equipo que tiene como 
+    misión hacer más dulce la vida de las personas.
+    Cada creación culinaria que elaboramos nace a partir de nuestros más profundos sentimientos,
+    ya que cada cosa que cocinamos se hace con amor y dedicacion.
+    Nos esforzamos por utilizar los mejores ingredientes y técnicas de repostería para brindarte los postres
+    más deliciosos y exquisitos que hayas probado. En nuestra pagina web, podras encontrar una amplia variedad 
+    de opciones para satisfacer los antojos más dulces y los paladares más exigentes.
+    ¡Esperamos que disfrutes de esta experiencia culinaria tanto como nosotros!
+  </div>
+</div>
+  
+<div class="in-flex">
+  <div class="media" >
+    <div class="imagen-ingredientes">
+      <img src="Img/Ingredientes.jpeg" width="820" height="600"  alt="imagen de ingredientes">
+    </div>
+  </div>
+
+  <div class="in-flex">
+  <div class="video">
+  <video width="820" height="640" controls autoplay loop muted>
+  <source src="Media/Torta de frutillas.mp4" type="video/mp4">
+  </video> </div>
+</div>
+</div>
+
+<div class="in-flex">
+<div class="Comentarios">
+
+<form> <label> ¡Dejanos tu comentario o sugerencia!</label>
+<input type="text" id="nuevaTarea"> <button type="button" onclick="agregarTarea()">Comentar</button>
+</form>
+<ul id="listaTareas" onclick="eliminarTarea(event)"></ul>
+
+</div>
+</div>
+</section>
+</main>
+
+<div class="in-flex"><footer> Diseñado por Chiara D'Agostino - &copy2023</footer></div>
+
+<script src="./Scripts/script.js"></script>
+
+  </body>
+</html>

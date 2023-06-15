@@ -1,0 +1,421 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: rgb(255, 223, 240);
+}
+/*ABRO CONFIGURACION RESPONSIVE DE BARRA DE NAVEGACION*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background:#ff00c8;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+    background: rgb(255, 223, 240);
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #ff00c8;
+}
+
+
+.menu {
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #ff00c8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #ff00c8;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: #ff00c849;
+}
+
+.menu .text-menu-selected{
+    color: #ff00c8;
+}
+
+.menu nav ul li a i{
+    display: none;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 100%;
+    color:#fdb5e5 ;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+    color:rgba(248, 5, 187, 0.705) ;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#ff00c8 ff00c8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color:rgba(248, 5, 187, 0.705) ;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/*ABRO*/
+.show-menu nav ul {display:inline-block; position:absolute;} 
+.dropdown {
+    display: inline-block;
+    position: relative;
+    color:rgba(248, 5, 187, 0.705);}
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);}
+.dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content a {
+    display: block;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+background:rgb(255, 223, 240);}
+  .dropdown-content a:hover {
+    color: rgba(248, 5, 187, 0.705);
+    background-color: rgb(255, 223, 240);}
+
+/*CIERRO*/
+
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+    }
+
+    #icon-menu{
+        display: flex;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+}
+/*CIERRE CONFIGURACION RESPONSIVE DE BARRA DE NAVEGACION*/
+
+/*Inicio*/
+.Bienvenidos {font-size: 140%;text-align: center; padding: 2%;}
+.media {display: flex; margin-top:1%; margin-left: 2%; margin-top: 2%;
+}
+.video {margin:auto;margin-left: 2%; margin-right: 2%
+}
+.imagen-ingredientes {margin-left: 2%; margin-right: 2%; width: 800px; height: 333px;}
+.Comentarios {text-align: center; border: 1px solid rgba(248, 5, 187, 0.705); padding: 2em; }
+/* Cierre Inicio*/
+
+
+
+/*Carrusel principal*/
+#carrusel-caja { margin-top: 5%;
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.075s ease;
+    height: 100px;
+    width: 300%;
+}
+#carrusel-contenido {
+    margin:auto ;
+    overflow:hidden ;
+    text-align:center;
+}
+.imagenes{
+    height: 500px;
+    width: 200%;
+}
+.carrusel-elemento {
+    float:left ;
+    width: 33.333%;
+}
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;   }
+
+        35% {
+            margin-left: -100%;
+        }
+        65% {
+            margin-left: -100%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        95% {
+            margin-left: -200%;
+        }
+        100% {
+            margin-left: 0;
+        }
+}
+/*Termina Carrusel principal*/
+
+
+/*Como Comprar*/
+.Como-comprar {font-size:140%; text-align: center; padding: 1%;}
+/*Como Comprar final*/
+
+/*Contactanos*/
+.Contactanos h4 {font-size:100%; padding: 8px; color:rgba(248, 5, 187, 0.705); }
+.Contactanos ul li a {color:rgba(248, 5, 187, 0.705) ;text-decoration: none; }
+/*Contactanos final*/
+
+/*Productos*/
+ul li {display: flex;}
+.card {padding: 1%;}
+ul li .card { overflow:hidden ; background:rgb(255, 223, 240) ; box-shadow: 0px 1px 10px rgba(248, 5, 187, 0.705);cursor: default; transition: all 400ms ease; border: 20px; margin: 20px; }
+.card .card-body{padding: 15px; text-align:center; }
+.card:hover {box-shadow: 5px 5px 20px rgb(255, 255, 255); transform:translateY(-3%)}
+.card-img-top { width: 75%; height: 200px ; padding: 14%;}
+
+.btn-primary {text-decoration: none; margin-top: 20px; background: rgba(255, 234, 246, 0.966) ; color: rgba(248, 5, 187, 0.705) ; border: 1px solid rgba(248, 5, 187, 0.705) ; border-radius: 4px; transition: all 400ms ease; padding: 3px; }
+.btn-primary:hover {background:rgba(248, 5, 187, 0.705); color: white;}
+/*Productos final*/
+
+
+
+
+footer{clear: both; color: black; padding: 3em 0; margin-top: 2em;padding: 0%; text-align: center;}
+    
+
